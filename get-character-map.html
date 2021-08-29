@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Char Map</title>
+  </head>
+  <body>
+    <input type="checkbox" id="check-0" />
+    <input type="checkbox" id="check-1" />
+    <input type="checkbox" id="check-2" />
+    <input type="checkbox" id="check-3" />
+    <input type="checkbox" id="check-4" />
+    <br />
+    <input type="checkbox" id="check-5" />
+    <input type="checkbox" id="check-6" />
+    <input type="checkbox" id="check-7" />
+    <input type="checkbox" id="check-8" />
+    <input type="checkbox" id="check-9" />
+    <br />
+    <input type="checkbox" id="check-10" />
+    <input type="checkbox" id="check-11" />
+    <input type="checkbox" id="check-12" />
+    <input type="checkbox" id="check-13" />
+    <input type="checkbox" id="check-14" />
+    <br />
+    <input type="checkbox" id="check-15" />
+    <input type="checkbox" id="check-16" />
+    <input type="checkbox" id="check-17" />
+    <input type="checkbox" id="check-18" />
+    <input type="checkbox" id="check-19" />
+    <br />
+    <input type="checkbox" id="check-20" />
+    <input type="checkbox" id="check-21" />
+    <input type="checkbox" id="check-22" />
+    <input type="checkbox" id="check-23" />
+    <input type="checkbox" id="check-24" />
+    <br />
+    <input type="checkbox" id="check-25" />
+    <input type="checkbox" id="check-26" />
+    <input type="checkbox" id="check-27" />
+    <input type="checkbox" id="check-28" />
+    <input type="checkbox" id="check-29" />
+    <br />
+    <input type="checkbox" id="check-30" />
+    <input type="checkbox" id="check-31" />
+    <input type="checkbox" id="check-32" />
+    <input type="checkbox" id="check-33" />
+    <input type="checkbox" id="check-34" />
+    <br />
+    <button id="get-map" onclick="getMap()">Create</button>
+    <textarea name="" id="char-map" cols="30" rows="10"></textarea>
+    <script>
+      const charMap = document.getElementById("char-map");
+
+      function getMap() {
+        const charStates = [];
+        for (let i = 0; i < 35; i++) {
+          const charElem = document.getElementById(`check-${i}`);
+
+          charState = charElem.checked == true ? 1 : 0;
+          charStates.push(charState);
+        }
+
+        charMap.value = `[${charStates.join(",")}]`;
+      }
+    </script>
+  </body>
+</html>
